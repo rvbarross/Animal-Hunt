@@ -29,6 +29,35 @@ var tempo_limite = 2.0
 
 func _ready():
 	# Escolhe um Habitat/Cenário aleatório.
+	$"menu".play("menu")
+	$"LedSolo".play()
+	
+
+func _physics_process(delta):
+	if primeira_carta != null and segunda_carta != null:
+		if primeira_carta == segunda_carta:
+			print("FOI")
+		else:
+			tempo_decorrido += delta
+			
+			if tempo_decorrido >= tempo_limite:
+				primeira_carta = null
+				segunda_carta = null
+			
+				for i in cartas_selecionadas:
+					i.get_node("AnimationPlayer").play("esconder_carta")
+					i.pressionado = false
+
+				cartas_selecionadas = []
+				tempo_decorrido = 0
+
+
+func _on_menu_animation_finished():
+	$"btnPlay".visible = true
+	$"btnExit".visible = true
+
+
+func _on_btnPlay_pressed():
 	randomize()
 	var cenario_selecionado = cenarios[randi() % cenarios.size()]
 	add_child(cenario_selecionado[0].instance())
@@ -61,21 +90,3 @@ func _ready():
 		_carta.animal = animais_do_habitat_baralho[i]
 
 		add_child(_carta)
-
-func _physics_process(delta):
-	if primeira_carta != null and segunda_carta != null:
-		if primeira_carta == segunda_carta:
-			print("FOI")
-		else:
-			tempo_decorrido += delta
-			
-			if tempo_decorrido >= tempo_limite:
-				primeira_carta = null
-				segunda_carta = null
-			
-				for i in cartas_selecionadas:
-					i.get_node("AnimationPlayer").play("esconder_carta")
-					i.pressionado = false
-
-				cartas_selecionadas = []
-				tempo_decorrido = 0
