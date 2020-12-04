@@ -80,21 +80,14 @@ animations = [ {
 [node name="MenuBackground" type="AnimatedSprite"]
 scale = Vector2( 1.61, 1.27 )
 frames = SubResource( 1 )
-<<<<<<< HEAD
 frame = 33
-=======
-frame = 43
->>>>>>> b9db3fa24660512ab85b62eb31301a75344b87a1
 playing = true
 centered = false
 script = ExtResource( 67 )
 
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 17 )
-<<<<<<< HEAD
 volume_db = -20.194
-=======
->>>>>>> b9db3fa24660512ab85b62eb31301a75344b87a1
 
 [node name="JogarBotao" type="Button" parent="."]
 anchor_left = 0.5

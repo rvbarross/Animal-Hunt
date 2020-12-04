@@ -4,8 +4,4 @@
 
 [resource]
 atlas = ExtResource( 1 )
-<<<<<<< HEAD
 region = Rect2( 234, 9, 24, 18 )
-=======
-region = Rect2( 128, 45, 29, 19 )
->>>>>>> b9db3fa24660512ab85b62eb31301a75344b87a1

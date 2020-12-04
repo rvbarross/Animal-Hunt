@@ -58,10 +58,7 @@ tracks/1/keys = {
 margin_right = 268.0
 margin_bottom = 381.0
 rect_scale = Vector2( 0.3, 0.3 )
-<<<<<<< HEAD
 rect_pivot_offset = Vector2( 134, 190 )
-=======
->>>>>>> b9db3fa24660512ab85b62eb31301a75344b87a1
 icon = ExtResource( 2 )
 flat = true
 script = ExtResource( 1 )
