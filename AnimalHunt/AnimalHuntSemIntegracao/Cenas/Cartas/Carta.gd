@@ -5,8 +5,6 @@ var animal = ""
 var pressionado = false
 
 func _on_Carta_pressed():
-	#print(animal)
-	
 	if !pressionado:
 		pressionado = true
 	
