@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/moose.wav-6ccfa7175d7da0a3dc2fcb403949c4c8.sample"
+
+[deps]
+
+source_file="res://animalsSound/moose.wav"
+dest_files=[ "res://.import/moose.wav-6ccfa7175d7da0a3dc2fcb403949c4c8.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

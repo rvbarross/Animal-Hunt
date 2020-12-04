@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/orca.wav-1f4396a1ade9eaa93cf07927c6fcb7bb.sample"
+
+[deps]
+
+source_file="res://animalsSound/orca.wav"
+dest_files=[ "res://.import/orca.wav-1f4396a1ade9eaa93cf07927c6fcb7bb.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

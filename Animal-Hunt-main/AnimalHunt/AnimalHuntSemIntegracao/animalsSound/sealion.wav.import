@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/sealion.wav-8d5019da46437b2c7c759c7e1d2a03f0.sample"
+
+[deps]
+
+source_file="res://animalsSound/sealion.wav"
+dest_files=[ "res://.import/sealion.wav-8d5019da46437b2c7c759c7e1d2a03f0.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

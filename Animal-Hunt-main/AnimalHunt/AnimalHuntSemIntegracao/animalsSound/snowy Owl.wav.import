@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/snowy Owl.wav-64cb8dbe1fd4eca8b314504342da39fe.sample"
+
+[deps]
+
+source_file="res://animalsSound/snowy Owl.wav"
+dest_files=[ "res://.import/snowy Owl.wav-64cb8dbe1fd4eca8b314504342da39fe.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

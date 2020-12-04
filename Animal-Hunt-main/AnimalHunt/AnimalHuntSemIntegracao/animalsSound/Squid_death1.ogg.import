@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Squid_death1.ogg-eb7204278419c0252513e80334099f34.oggstr"
+
+[deps]
+
+source_file="res://animalsSound/Squid_death1.ogg"
+dest_files=[ "res://.import/Squid_death1.ogg-eb7204278419c0252513e80334099f34.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

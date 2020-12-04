@@ -1,0 +1,76 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Cenas/Cartas/Carta.gd" type="Script" id=1]
+[ext_resource path="res://Cenas/Cartas/carta.jpg" type="Texture" id=2]
+
+[sub_resource type="Animation" id=1]
+resource_name = "esconder_carta"
+length = 2.0
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:rect_scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0.3, -0.25, 0, 0.25, 0, 1e-05, -0.25, 0, 0.25, 0, 0.3, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 1, 1.5, 2 )
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("animal:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 1.5 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ null ]
+}
+
+[sub_resource type="Animation" id=2]
+length = 2.0
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:rect_scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0.3, -0.25, 0, 0.25, 0, 1e-05, -0.25, 0, 0.25, 0, 0.3, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 2 )
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("animal:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[node name="Carta" type="Button"]
+margin_right = 268.0
+margin_bottom = 381.0
+rect_scale = Vector2( 0.3, 0.3 )
+rect_pivot_offset = Vector2( 134, 190 )
+icon = ExtResource( 2 )
+flat = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/esconder_carta = SubResource( 1 )
+anims/revelar_carta = SubResource( 2 )
+
+[node name="animal" type="Sprite" parent="."]
+position = Vector2( 134, 191.667 )
+scale = Vector2( 4, 4 )
+[connection signal="pressed" from="." to="." method="_on_Carta_pressed"]
