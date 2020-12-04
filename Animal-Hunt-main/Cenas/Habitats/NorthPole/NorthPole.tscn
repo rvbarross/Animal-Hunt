@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=2]
-
-[ext_resource path="res://Animais2/imagem.jpg" type="Texture" id=1]
-
-[node name="Sprite" type="Sprite"]
-scale = Vector2( 0.802146, 0.936603 )
-texture = ExtResource( 1 )
-centered = false

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/moose.wav-8a44e3dfc8a3aa821c9801c912e4c82a.sample"
+
+[deps]
+
+source_file="res://pronunciaSom/moose.wav"
+dest_files=[ "res://.import/moose.wav-8a44e3dfc8a3aa821c9801c912e4c82a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
