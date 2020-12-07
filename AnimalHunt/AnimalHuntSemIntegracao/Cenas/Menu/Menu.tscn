@@ -81,7 +81,7 @@ animations = [ {
 [node name="MenuBackground" type="AnimatedSprite"]
 scale = Vector2( 1.61, 1.27 )
 frames = SubResource( 1 )
-frame = 13
+frame = 4
 playing = true
 centered = false
 script = ExtResource( 67 )
