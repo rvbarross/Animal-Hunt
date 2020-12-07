@@ -1,8 +1,41 @@
 extends Node2D
-
+var ultimaCarta = null;
 var carta = load("res://Cenas/Cartas/Carta.tscn")
 var posicao_inicial_carta = [216, -140]
-
+var infos = {
+	"artic Fox": "Animal extremamente branco",
+	"bear": "Peludo e sobe em árvores",
+	"buffalo": "Chifrudo e forte",
+	"cape-Oryx": "Animal com longos chifres",
+	"crab": "pequeno, costuma assustar banhistas",
+	"crocodile": "feroz e assustador",
+	"deer": "magro e com chifres",
+	"dolphin": "inteligente e brincalhão",
+	"fox": "caça pela noite",
+	"giraffe": "pescoço grande",
+	"hipoppotamus": "Gordo e com mordida forte",
+	"leopard": "Animal extremamente veloz",
+	"lion": "Forte, rei do reino animal",
+	"moose": "Animal grande e com chifres enormes",
+	"octopus": "Solta tinta",
+	"orca": "Chamadas de baleias assassinas",
+	"owl": "Tem as pernas longas",
+	"penguim": "São os machos que cuidam dos ovos",
+	"polar Bear": "Podem hibernar",
+	"rabbit": "Excelentes reprodutores",
+	"racoon": "Ladrãozinho que come lixo",
+	"sea Horse": "São os machos que engravidam",
+	"sea": "Inteligente e faz um som engraçado",
+	"sealion": "Comem bastante e ficam nas pedras",
+	"skunk": "Animal fedorento",
+	"snowy Owl": "Coruja das neves",
+	"squid": "Possui bico de papagaio",
+	"squirrel": "Velozes e comem nozes",
+	"starfish": "Parecem uma estrela morta porém vivem no fundo do mar",
+	"walrus": "Dentes grandes e gostam do gelo",
+	"whale": "Conseguem saltar da água",
+	"zebra": "São presas de leão e possuem a pele listrada"
+	}
 var cenarios = [[load("res://Cenas/Habitats/Floresta/Floresta.tscn"), "F"],
 				[load("res://Cenas/Habitats/NorthPole/NorthPole.tscn"), "N"],
 				[load("res://Cenas/Habitats/Rio/Rio.tscn"), "R"],
@@ -42,7 +75,6 @@ func _ready():
 	
 	if $MenuBackground.pode_jogar:
 		$Pontuacao/Tempo/Tempo.pode_iniciar = true
-		$Informacao/ImagemAnimal.visible = false
 		$Pontuacao/Tempo/Timer.start()
 		# Remove o habitat e as cartas caso já exista.
 		for _node in get_children():
@@ -95,20 +127,27 @@ func _physics_process(delta):
 	#Integração godot/esp
 	
 	
+	
 	# Fácil
 	if get_node("difMenu").selected_dif == "1":
-		if get_node("Pontuacao/Tempo/Tempo").m == 3:
+		get_node("Pontuacao/Tempo/Tempo").mm = 8
+		get_node("Pontuacao/Tempo/Tempo").ss = 59
+		if get_node("Pontuacao/Tempo/Tempo").m == 9:
 			$Timeout.visible = true
 			$AnimationPlayer.play("TimeoutAnimation")
 			
 	# Médio
 	if get_node("difMenu").selected_dif == "2":
+		get_node("Pontuacao/Tempo/Tempo").mm = 5
+		get_node("Pontuacao/Tempo/Tempo").ss = 59
 		if get_node("Pontuacao/Tempo/Tempo").m == 6:
 			$Timeout.visible = true
 			$AnimationPlayer.play("TimeoutAnimation")
 			
 	# Difícil
 	if get_node("difMenu").selected_dif == "3":
+		get_node("Pontuacao/Tempo/Tempo").mm = 2
+		get_node("Pontuacao/Tempo/Tempo").ss = 59
 		if get_node("Pontuacao/Tempo/Tempo").m == 3:
 			$Timeout.visible = true
 			$AnimationPlayer.play("TimeoutAnimation")
@@ -133,17 +172,29 @@ func _physics_process(delta):
 	
 	if primeira_carta != null and segunda_carta != null:
 		if primeira_carta == segunda_carta and not par_marcado.has(primeira_carta):
+			
 			Socket.write_text("acenderGreen\n")
-			$Informacao/ImagemAnimal.visible = true
+			
 			# Adiciona o animal (do par virado) à lista.
 			par_marcado.append(primeira_carta)
 			
 			# Altera o "NomeAnimal" para o nome do animal (par selecionado).
 			$Informacao/NomeAnimal.text = primeira_carta.capitalize()
 			
+			# Altera o Background informação animal para visível.
+			$Informacao/InformacaoAnimalBackground.visible = true;
 			# Altera o "ImagemAnimal" para a imagem do animal (par selecionado).
-			$Informacao/ImagemAnimal.texture = load("res://AnimaisInfo/%s.png" % primeira_carta)
+			print(primeira_carta)
+			var sprite = get_node("Informacao/%s" % primeira_carta)
+			get_node("Informacao/DescricaoAnimal").text = infos["%s" % primeira_carta]
+			if pares == 0: 
+				
+				sprite.visible = true
+			else:
+				sprite.visible = true
+				get_node("Informacao/%s" % ultimaCarta).visible = false
 			
+			ultimaCarta = primeira_carta;
 			# Deixa as cartas viradas, permite a escolha de outras cartas.
 			primeira_carta = null
 			segunda_carta = null

@@ -14,6 +14,7 @@ func _ready():
 func _on_JogarBotao_pressed():
 	# Troca de cena.
 	pode_jogar = true
+	get_parent().get_node("Pontuacao/Tempo/Dificuldade").text = str(2)
 	get_parent().get_node("difMenu").selected_dif = "2"
 	visible = false
 	$BackgroundMusic.stop()

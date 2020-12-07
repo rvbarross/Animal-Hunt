@@ -1,11 +1,43 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=41 format=2]
 
 [ext_resource path="res://congratulations/img.png" type="Texture" id=1]
 [ext_resource path="res://Game.gd" type="Script" id=2]
 [ext_resource path="res://Cenas/Menu/DiffMenu/DiffMenu.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Cenas/Menu/Menu.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Tempo.gd" type="Script" id=5]
+[ext_resource path="res://AnimaisGodot/whale.png" type="Texture" id=6]
 [ext_resource path="res://timeout.png" type="Texture" id=7]
+[ext_resource path="res://AnimaisGodot/leopard.png" type="Texture" id=8]
+[ext_resource path="res://AnimaisGodot/moose.png" type="Texture" id=9]
+[ext_resource path="res://AnimaisGodot/crocodile.png" type="Texture" id=10]
+[ext_resource path="res://AnimaisGodot/octopus.png" type="Texture" id=11]
+[ext_resource path="res://AnimaisGodot/polar Bear.png" type="Texture" id=12]
+[ext_resource path="res://AnimaisGodot/skunk.png" type="Texture" id=13]
+[ext_resource path="res://AnimaisGodot/crab.png" type="Texture" id=14]
+[ext_resource path="res://AnimaisGodot/deer.png" type="Texture" id=15]
+[ext_resource path="res://AnimaisGodot/dolphin.png" type="Texture" id=16]
+[ext_resource path="res://AnimaisGodot/cape-Oryx.png" type="Texture" id=17]
+[ext_resource path="res://AnimaisGodot/orca.png" type="Texture" id=18]
+[ext_resource path="res://AnimaisGodot/rabbit.png" type="Texture" id=19]
+[ext_resource path="res://AnimaisGodot/fox.png" type="Texture" id=20]
+[ext_resource path="res://AnimaisGodot/racoon.png" type="Texture" id=21]
+[ext_resource path="res://AnimaisGodot/seal.png" type="Texture" id=22]
+[ext_resource path="res://AnimaisGodot/snowy Owl.png" type="Texture" id=23]
+[ext_resource path="res://AnimaisGodot/squirrel.png" type="Texture" id=24]
+[ext_resource path="res://AnimaisGodot/squid.png" type="Texture" id=25]
+[ext_resource path="res://AnimaisGodot/starfish.png" type="Texture" id=26]
+[ext_resource path="res://AnimaisGodot/bear.png" type="Texture" id=27]
+[ext_resource path="res://AnimaisGodot/walrus.png" type="Texture" id=28]
+[ext_resource path="res://AnimaisGodot/buffalo.png" type="Texture" id=29]
+[ext_resource path="res://AnimaisGodot/lion.png" type="Texture" id=30]
+[ext_resource path="res://AnimaisGodot/owl.png" type="Texture" id=31]
+[ext_resource path="res://AnimaisGodot/sea Horse.png" type="Texture" id=32]
+[ext_resource path="res://AnimaisGodot/sealion.png" type="Texture" id=33]
+[ext_resource path="res://AnimaisGodot/penguim.png" type="Texture" id=34]
+[ext_resource path="res://AnimaisGodot/artic Fox.png" type="Texture" id=35]
+[ext_resource path="res://AnimaisGodot/giraffe.png" type="Texture" id=36]
+[ext_resource path="res://AnimaisGodot/hipoppotamus.png" type="Texture" id=37]
+[ext_resource path="res://AnimaisGodot/zebra.png" type="Texture" id=38]
 
 [sub_resource type="Animation" id=1]
 resource_name = "CongrAnimation"
@@ -115,7 +147,7 @@ anchor_bottom = 60.0
 margin_left = 10.0
 margin_top = 10.0
 margin_right = 130.0
-margin_bottom = 88.0
+margin_bottom = 127.0
 color = Color( 0, 0, 0, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -162,6 +194,15 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Dificuldade" type="RichTextLabel" parent="Pontuacao/Tempo"]
+margin_left = 49.2162
+margin_top = 104.271
+margin_right = 110.216
+margin_bottom = 119.271
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Timer" type="Timer" parent="Pontuacao/Tempo"]
 
 [node name="TextoTempo" type="RichTextLabel" parent="Pontuacao/Tempo"]
@@ -174,44 +215,244 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Dificuldade2" type="RichTextLabel" parent="Pontuacao/Tempo"]
+margin_left = 15.5946
+margin_top = 84.0816
+margin_right = 119.595
+margin_bottom = 99.0816
+text = "Dificuldade:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Informacao" type="Node2D" parent="."]
 
 [node name="InformacaoAnimalBackground" type="ColorRect" parent="Informacao"]
 visible = false
 modulate = Color( 1, 1, 1, 0.501961 )
-margin_left = 774.0
+margin_left = 11.1892
 margin_top = 10.0
-margin_right = 1014.0
+margin_right = 251.189
 margin_bottom = 590.0
 color = Color( 0, 0, 0, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ImagemAnimal" type="Sprite" parent="Informacao"]
-position = Vector2( 155.092, 298.459 )
-scale = Vector2( 0.540203, 0.810591 )
+[node name="artic Fox" type="Sprite" parent="Informacao"]
+visible = false
+position = Vector2( 130.806, 302.865 )
+scale = Vector2( 0.262917, 0.367396 )
+texture = ExtResource( 35 )
+
+[node name="bear" type="Sprite" parent="Informacao"]
+visible = false
+position = Vector2( 130.579, 327.127 )
+scale = Vector2( 0.350986, 0.520223 )
+texture = ExtResource( 27 )
+
+[node name="buffalo" type="Sprite" parent="Informacao"]
+visible = false
+position = Vector2( 130.995, 326.068 )
+scale = Vector2( 0.288914, 0.337738 )
+texture = ExtResource( 29 )
+
+[node name="cape-Oryx" type="Sprite" parent="Informacao"]
+visible = false
+position = Vector2( 130.41, 312.825 )
+scale = Vector2( 0.277792, 0.38789 )
+texture = ExtResource( 17 )
+
+[node name="crab" type="Sprite" parent="Informacao"]
+visible = false
+position = Vector2( 130.758, 304.879 )
+scale = Vector2( 0.423345, 0.59113 )
+texture = ExtResource( 14 )
+
+[node name="crocodile" type="Sprite" parent="Informacao"]
+visible = false
+position = Vector2( 130.059, 306.998 )
+scale = Vector2( 0.350992, 0.490101 )
+texture = ExtResource( 10 )
+
+[node name="deer" type="Sprite" parent="Informacao"]
+visible = false
+position = Vector2( 131.08, 330.836 )
+scale = Vector2( 0.416194, 0.581144 )
+texture = ExtResource( 15 )
+
+[node name="dolphin" type="Sprite" parent="Informacao"]
+visible = false
+position = Vector2( 131.891, 310.706 )
+scale = Vector2( 0.254756, 0.355724 )
+texture = ExtResource( 16 )
+
+[node name="fox" type="Sprite" parent="Informacao"]
+visible = false
+position = Vector2( 129.346, 313.884 )
+scale = Vector2( 0.262776, 0.366922 )
+texture = ExtResource( 20 )
+
+[node name="giraffe" type="Sprite" parent="Informacao"]
+visible = false
+position = Vector2( 132.054, 306.192 )
+scale = Vector2( 0.536032, 0.394825 )
+texture = ExtResource( 36 )
+
+[node name="hipoppotamus" type="Sprite" parent="Informacao"]
+visible = false
+position = Vector2( 131.203, 305.408 )
+scale = Vector2( 0.225064, 0.314264 )
+texture = ExtResource( 37 )
+
+[node name="leopard" type="Sprite" parent="Informacao"]
+visible = false
+position = Vector2( 132.054, 293.225 )
+scale = Vector2( 0.456151, 0.353387 )
+texture = ExtResource( 8 )
+
+[node name="lion" type="Sprite" parent="Informacao"]
+visible = false
+position = Vector2( 130.561, 308.057 )
+scale = Vector2( 0.447426, 0.605847 )
+texture = ExtResource( 30 )
+
+[node name="moose" type="Sprite" parent="Informacao"]
+visible = false
+position = Vector2( 130.741, 306.468 )
+scale = Vector2( 0.312992, 0.367472 )
+texture = ExtResource( 9 )
+
+[node name="octopus" type="Sprite" parent="Informacao"]
+visible = false
+position = Vector2( 128.876, 304.349 )
+scale = Vector2( 0.1892, 0.264186 )
+texture = ExtResource( 11 )
+
+[node name="orca" type="Sprite" parent="Informacao"]
+visible = false
+position = Vector2( 131.257, 307.527 )
+scale = Vector2( 0.225064, 0.314264 )
+texture = ExtResource( 18 )
+
+[node name="owl" type="Sprite" parent="Informacao"]
+visible = false
+position = Vector2( 130.995, 308.057 )
+scale = Vector2( 0.464494, 0.347128 )
+texture = ExtResource( 31 )
+
+[node name="penguim" type="Sprite" parent="Informacao"]
+visible = false
+position = Vector2( 129.935, 305.896 )
+scale = Vector2( 0.48989, 0.359523 )
+texture = ExtResource( 34 )
+
+[node name="polar Bear" type="Sprite" parent="Informacao"]
+visible = false
+position = Vector2( 131.136, 304.879 )
+scale = Vector2( 0.289199, 0.50486 )
+texture = ExtResource( 12 )
+
+[node name="rabbit" type="Sprite" parent="Informacao"]
+visible = false
+position = Vector2( 131.204, 314.414 )
+scale = Vector2( 0.319856, 0.446624 )
+texture = ExtResource( 19 )
+
+[node name="racoon" type="Sprite" parent="Informacao"]
+visible = false
+position = Vector2( 130.465, 295.344 )
+scale = Vector2( 0.1612, 0.204654 )
+texture = ExtResource( 21 )
+
+[node name="sea Horse" type="Sprite" parent="Informacao"]
+visible = false
+position = Vector2( 130.995, 301.054 )
+scale = Vector2( 0.740121, 0.588569 )
+texture = ExtResource( 32 )
+
+[node name="sea" type="Sprite" parent="Informacao"]
+visible = false
+position = Vector2( 130.995, 309.035 )
+scale = Vector2( 0.116711, 0.133233 )
+texture = ExtResource( 22 )
+
+[node name="sealion" type="Sprite" parent="Informacao"]
+visible = false
+position = Vector2( 129.909, 303.819 )
+scale = Vector2( 0.408437, 0.570312 )
+texture = ExtResource( 33 )
+
+[node name="skunk" type="Sprite" parent="Informacao"]
+visible = false
+position = Vector2( 130.105, 316.483 )
+scale = Vector2( 0.107407, 0.0849969 )
+texture = ExtResource( 13 )
+
+[node name="snowy Owl" type="Sprite" parent="Informacao"]
+visible = false
+position = Vector2( 131.609, 315.6 )
+scale = Vector2( 0.114304, 0.159606 )
+texture = ExtResource( 23 )
+
+[node name="squid" type="Sprite" parent="Informacao"]
+visible = false
+position = Vector2( 132.803, 316.1 )
+scale = Vector2( 0.1512, 0.170852 )
+texture = ExtResource( 25 )
+
+[node name="squirrel" type="Sprite" parent="Informacao"]
+visible = false
+position = Vector2( 129.303, 314.417 )
+scale = Vector2( 0.491526, 0.609844 )
+texture = ExtResource( 24 )
+
+[node name="starfish" type="Sprite" parent="Informacao"]
+visible = false
+position = Vector2( 130.803, 318.6 )
+scale = Vector2( 0.110587, 0.185193 )
+texture = ExtResource( 26 )
+
+[node name="walrus" type="Sprite" parent="Informacao"]
+visible = false
+position = Vector2( 129.058, 313.508 )
+scale = Vector2( 0.32965, 0.396494 )
+texture = ExtResource( 28 )
+
+[node name="whale" type="Sprite" parent="Informacao"]
+visible = false
+position = Vector2( 131.703, 306.426 )
+scale = Vector2( 0.144113, 0.209298 )
+texture = ExtResource( 6 )
+
+[node name="zebra" type="Sprite" parent="Informacao"]
+visible = false
+position = Vector2( 130.845, 298.376 )
+scale = Vector2( 0.284324, 0.397011 )
+texture = ExtResource( 38 )
 
 [node name="NomeAnimal" type="RichTextLabel" parent="Informacao"]
-visible = false
 anchor_left = 0.5
 anchor_top = 0.043
 anchor_right = 0.5
 anchor_bottom = 0.043
-margin_left = 874.0
-margin_top = 20.0
-margin_right = 1009.0
-margin_bottom = 60.0
+margin_left = 15.0
+margin_top = 25.0
+margin_right = 81.0
+margin_bottom = 59.0
+rect_scale = Vector2( 3.5, 3.5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="DescricaoAnimal" type="RichTextLabel" parent="Informacao"]
-visible = false
-margin_left = 785.0
-margin_top = 184.0
-margin_right = 1000.0
-margin_bottom = 545.0
+margin_left = 15.4126
+margin_top = 488.413
+margin_right = 192.413
+margin_bottom = 562.413
+rect_scale = Vector2( 1.3, 1.3 )
+text = "
+"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -247,11 +488,11 @@ visible = false
 
 [node name="MenuBackground" parent="." instance=ExtResource( 4 )]
 visible = false
-frame = 1
+frame = 2
 
 [node name="Timeout" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0 )
-position = Vector2( 764.853, 180.408 )
+position = Vector2( 769.61, 198.246 )
 scale = Vector2( 0.408881, 0.633125 )
 texture = ExtResource( 7 )
 centered = false
